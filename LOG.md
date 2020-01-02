@@ -32,6 +32,17 @@
       npm start
     Happy hacking!
     ```
+- Entry point for frontend is the App Component in `./client/src/App.js`
+- GET data from api endpoint: use the Fetch promise API:
+    ```javascript
+    fetch("http://localhost:9000/testApi")
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res }))
+        .catch(err => err);
+    ```
+    ```typescript jsx
+    <p>{ this.state.apiResponse }</p>
+    ```
 
 ### Express backend
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html)
@@ -55,6 +66,9 @@
     npm WARN deprecated transformers@2.1.0: Deprecated, use jstransformer
     npm WARN deprecated constantinople@3.0.2: Please update to at least constantinople 3.1.1
     ```
+- Executable entry point for the Express app is `./api/bin/www`, a JavaScript file with node.js shebang
+- Setup main app login in ./api/app.js
+- Express runs on port 9000 (`app.set('port', 9000)` in bin/www)
 
 ### git
 - Committed this basic framework to git: https://github.com/reideast/cv-blog-js
