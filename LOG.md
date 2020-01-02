@@ -32,6 +32,17 @@
       npm start
     Happy hacking!
     ```
+- Entry point for frontend is the App Component in `./client/src/App.js`
+- GET data from api endpoint: use the Fetch promise API:
+    ```javascript
+    fetch("http://localhost:9000/testApi")
+        .then(res => res.text())
+        .then(res => this.setState({ apiResponse: res }))
+        .catch(err => err);
+    ```
+    ```typescript jsx
+    <p>{ this.state.apiResponse }</p>
+    ```
 
 ### Express backend
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html)
