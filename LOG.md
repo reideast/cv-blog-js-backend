@@ -59,13 +59,6 @@
     run the app:
     SET DEBUG=api:* & npm start
     ```
-- TODO: needs an `npm audit fix`
-- TODO: warnings:
-    ```
-    npm WARN deprecated jade@1.11.0: Jade has been renamed to pug, please install the latest version of pug instead of jade
-    npm WARN deprecated transformers@2.1.0: Deprecated, use jstransformer
-    npm WARN deprecated constantinople@3.0.2: Please update to at least constantinople 3.1.1
-    ```
 - Executable entry point for the Express app is `./api/bin/www`, a JavaScript file with node.js shebang
 - Setup main app login in ./api/app.js
 - Express runs on port 9000 (`app.set('port', 9000)` in bin/www)
