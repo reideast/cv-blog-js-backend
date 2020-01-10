@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get("/", (req, res, next) => {
-    res.send("API is responding");
+    res.send("API connection successful");
 });
 
 module.exports = router;
