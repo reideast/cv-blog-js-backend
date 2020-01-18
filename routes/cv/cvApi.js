@@ -129,5 +129,58 @@ router.get('/schools', (req, res, next) => {
     ]);
 });
 
+router.get('/skills', (req, res, next) => {
+    res.json([
+        {
+            skill: 'Programming Languages',
+            details: [
+                'Java',
+                'JavaScript',
+                'Python',
+                'React',
+                'TypeScript',
+                'Node.js',
+                'HTML',
+                'CSS',
+                'PostgreSQL',
+                'C',
+                'bash',
+            ]
+        },
+        {
+            skill: 'Coding tools',
+            details: [
+                'git',
+                'vim',
+                'AWS',
+                'IntelliJ',
+                'Gradle',
+                'Jira',
+            ]
+        },
+        {
+            skill: 'IT Systems Admin',
+            details: [
+                'Windows 10,8,7,XP',
+                'Windows Server 2012',
+                'RHEL',
+                'CentOS',
+                'Cisco hardware & IOS',
+                'Rack-mount server hardware',
+            ]
+        },
+        {
+            skill: 'Office Skills',
+            details: [
+                'Excel',
+                'Access',
+                'Publisher',
+                'Word',
+                'Visio',
+                'Typing 80 WPM',
+            ]
+        },
+    ]);
+});
 
 module.exports = router;
