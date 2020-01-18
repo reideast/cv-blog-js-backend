@@ -84,4 +84,50 @@ router.get("/job", (req, res, next) => {
     ]);
 });
 
+router.get('/schools', (req, res, next) => {
+    res.json([
+        {
+            school: 'National University of Ireland, Galway',
+            date: '2016-2019',
+            degree: 'Bachelor of Science (Honours), Computer Science',
+            location: 'Galway, Ireland',
+            grade: 'First-class Honours: overall marks 90.18% (A+ equivalent)',
+            thesis: {
+                description: 'Thesis Project: Genetic algorithm to schedule a timetable using machine learning in Java EE presented as a React app deployed to AWS, EC2, and an RDS Postgres database',
+                url: 'https://github.com/reideast/genetic-algorithm-timetable'
+            },
+            details: [
+                'Java Data Structures & Algorithms A',
+                'Software Engineering A+',
+                'Databases A+',
+                'Discrete Maths A+',
+                'AI A',
+                'Machine Learning A+',
+                'Cryptography A+'
+            ]
+        },
+        {
+            school: 'Riverside City College',
+            date: '2014-2015',
+            degree: 'Associate of Science, Computer Science',
+            location: 'California, United States',
+            grades: 'Dean\'s List Honours: (Overall 97.8%)',
+            thesis: {
+                description: 'Content management system in PHP and MySQL',
+                url: 'https://github.com/reideast/PHP_CMS'
+            },
+            details: [
+                'Systems Analysis',
+                'Programming in C++',
+                'Java',
+                'PHP',
+                'Operating Systems',
+                'Data Structures',
+                'Cisco Networking Academy'
+            ]
+        }
+    ]);
+});
+
+
 module.exports = router;
