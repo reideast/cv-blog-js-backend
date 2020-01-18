@@ -5,6 +5,20 @@ router.get("/name", (req, res) => {
     res.send('Andrew Reid East');
 });
 
+router.get("/contacts", (req, res, next) => {
+    res.json({
+        email: 'andrew@andreweast.net',
+        location: 'Galway, Ireland',
+        portfolio: 'andreweast.net/portfolio',
+        github: 'reideast',
+        linkedin: 'andrewreideast',
+        twitter: 'deskase',
+        aboutme: 'andrewreideast',
+        facebook: '' // This is an example of a service which the person is not using
+        // TODO: What other services could be available here?
+    });
+});
+
 router.get("/about", (req, res, next) => {
     // Each item in the array should be a line (e.g. <p>) in the intro/about block of a CV
     res.json([
