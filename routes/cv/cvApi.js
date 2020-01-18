@@ -91,7 +91,7 @@ router.get('/schools', (req, res, next) => {
             date: '2016-2019',
             degree: 'Bachelor of Science (Honours), Computer Science',
             location: 'Galway, Ireland',
-            grade: 'First-class Honours: overall marks 90.18% (A+ equivalent)',
+            gpa_overall_results: 'First-class Honours: overall marks 90.18% (A+ equivalent)',
             thesis: {
                 description: 'Thesis Project: Genetic algorithm to schedule a timetable using machine learning in Java EE presented as a React app deployed to AWS, EC2, and an RDS Postgres database',
                 url: 'https://github.com/reideast/genetic-algorithm-timetable'
@@ -111,7 +111,7 @@ router.get('/schools', (req, res, next) => {
             date: '2014-2015',
             degree: 'Associate of Science, Computer Science',
             location: 'California, United States',
-            grades: 'Dean\'s List Honours: (Overall 97.8%)',
+            gpa_overall_results: 'Dean\'s List Honours: (Overall 97.8%)',
             thesis: {
                 description: 'Content management system in PHP and MySQL',
                 url: 'https://github.com/reideast/PHP_CMS'
