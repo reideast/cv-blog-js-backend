@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+router.get("/name", (req, res) => {
+    res.send('Andrew Reid East');
+});
+
 router.get("/about", (req, res, next) => {
     // Each item in the array should be a line (e.g. <p>) in the intro/about block of a CV
     res.json([
