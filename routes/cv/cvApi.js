@@ -129,6 +129,52 @@ router.get('/schools', (req, res, next) => {
     ]);
 });
 
+router.get('/memberships', (req, res, next) => {
+    res.json([
+        {
+            organization: 'Association for Computing Machinery (ACM)',
+            date: 'Since 2015',
+            details: []
+        },
+        {
+            organization: 'Google Developers Group Galway',
+            date: 'Since 2016',
+            details: []
+        },
+        {
+            organization: 'DevOps Meetup Galway',
+            date: 'Since 2018',
+            details: []
+        },
+        {
+            organization: 'CompSoc, NUI Galway',
+            date: '2016-2019',
+            details: [
+                'Vice-Auditor 2017',
+            ]
+        },
+        {
+            organization: 'Digital Champions, NUI Galway',
+            date: '2016-2018',
+            details: []
+        },
+        {
+            organization: 'Cisco Certified Networking Associate (CCNA)',
+            date: '2013',
+            details: [
+                'Routing and Switching',
+            ]
+        },
+        {
+            organization: 'CompTIA A+ Certification',
+            date: '2011',
+            details: [
+                'Computer Technician',
+            ]
+        },
+    ]);
+});
+
 router.get('/skills', (req, res, next) => {
     res.json([
         {
