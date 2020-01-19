@@ -1,6 +1,32 @@
 var express = require('express');
 var router = express.Router();
 
+router.get("/name", (req, res) => {
+    res.send('Andrew Reid East');
+});
+
+router.get("/contacts", (req, res, next) => {
+    res.json({
+        email: 'andrew@andreweast.net',
+        location: 'Galway, Ireland',
+        portfolio: 'andreweast.net/portfolio',
+        github: 'reideast',
+        linkedin: 'andrewreideast',
+        twitter: 'deskase',
+        aboutme: 'andrewreideast',
+        facebook: '' // This is an example of a service which the person is not using
+        // TODO: What other services could be available here?
+    });
+});
+
+router.get("/about", (req, res, next) => {
+    // Each item in the array should be a line (e.g. <p>) in the intro/about block of a CV
+    res.json([
+        'Hello world, I\'m Andrew. I like coding, I\'m nerdy about a lot of stuff, and I putting together this web site now!',
+        'Graduate software engineer with a lifelong enthusiasm for coding along with ten years of proven IT experience',
+    ]);
+});
+
 router.get("/job", (req, res, next) => {
     res.json([
         {
@@ -81,6 +107,151 @@ router.get("/job", (req, res, next) => {
                 'Fed giraffes'
             ]
         }
+    ]);
+});
+
+router.get('/schools', (req, res, next) => {
+    res.json([
+        {
+            school: 'National University of Ireland, Galway',
+            date: '2016-2019',
+            degree: 'Bachelor of Science (Honours), Computer Science',
+            location: 'Galway, Ireland',
+            gpa_overall_results: 'First-class Honours: overall marks 90.18% (A+ equivalent)',
+            thesis: {
+                description: 'Thesis Project: Genetic algorithm to schedule a timetable using machine learning in Java EE presented as a React app deployed to AWS, EC2, and an RDS Postgres database',
+                url: 'https://github.com/reideast/genetic-algorithm-timetable'
+            },
+            details: [
+                'Java Data Structures & Algorithms A',
+                'Software Engineering A+',
+                'Databases A+',
+                'Discrete Maths A+',
+                'AI A',
+                'Machine Learning A+',
+                'Cryptography A+'
+            ]
+        },
+        {
+            school: 'Riverside City College',
+            date: '2014-2015',
+            degree: 'Associate of Science, Computer Science',
+            location: 'California, United States',
+            gpa_overall_results: 'Dean\'s List Honours: (Overall 97.8%)',
+            thesis: {
+                description: 'Content management system in PHP and MySQL',
+                url: 'https://github.com/reideast/PHP_CMS'
+            },
+            details: [
+                'Systems Analysis',
+                'Programming in C++',
+                'Java',
+                'PHP',
+                'Operating Systems',
+                'Data Structures',
+                'Cisco Networking Academy'
+            ]
+        }
+    ]);
+});
+
+router.get('/memberships', (req, res, next) => {
+    res.json([
+        {
+            organization: 'Association for Computing Machinery (ACM)',
+            date: 'Since 2015',
+            details: []
+        },
+        {
+            organization: 'Google Developers Group Galway',
+            date: 'Since 2016',
+            details: []
+        },
+        {
+            organization: 'DevOps Meetup Galway',
+            date: 'Since 2018',
+            details: []
+        },
+        {
+            organization: 'CompSoc, NUI Galway',
+            date: '2016-2019',
+            details: [
+                'Vice-Auditor 2017',
+            ]
+        },
+        {
+            organization: 'Digital Champions, NUI Galway',
+            date: '2016-2018',
+            details: []
+        },
+        {
+            organization: 'Cisco Certified Networking Associate (CCNA)',
+            date: '2013',
+            details: [
+                'Routing and Switching',
+            ]
+        },
+        {
+            organization: 'CompTIA A+ Certification',
+            date: '2011',
+            details: [
+                'Computer Technician',
+            ]
+        },
+    ]);
+});
+
+router.get('/skills', (req, res, next) => {
+    res.json([
+        {
+            skill: 'Programming Languages',
+            details: [
+                'Java',
+                'JavaScript',
+                'Python',
+                'React',
+                'TypeScript',
+                'Node.js',
+                'HTML',
+                'CSS',
+                'PostgreSQL',
+                'C',
+                'bash',
+            ]
+        },
+        {
+            skill: 'Coding tools',
+            details: [
+                'git',
+                'vim',
+                'AWS',
+                'IntelliJ',
+                'Gradle',
+                'Jira',
+            ]
+        },
+        {
+            skill: 'IT Systems Admin',
+            details: [
+                'Windows 10,8,7,XP',
+                'Windows Server 2012',
+                'RHEL',
+                'CentOS',
+                'Cisco hardware & IOS',
+                'Rack-mount server hardware',
+            ]
+        },
+        {
+            skill: 'Office Skills',
+            details: [
+                'Excel',
+                'Access',
+                'Publisher',
+                'Word',
+                'Visio',
+                'Typing 80 WPM',
+            ]
+        },
     ]);
 });
 
